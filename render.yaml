@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: casma-logistics
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: EMAIL_USER
+        value: casmalogistics03@gmail.com
+      - key: EMAIL_PASS
+        sync: false
+      - key: PORT
+        value: 3000
